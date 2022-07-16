@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TwoPage extends StatelessWidget {
-  final String args;
-  const TwoPage({Key ? key, required this.args}) : super(key: key);
+  
+  const TwoPage({Key ? key}) : super(key: key);
 
   @override
    Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class TwoPage extends StatelessWidget {
           onPressed: () {
             Navigator.of(context).pop();
           },
-          child: Text('Voltar para pagina anterior $args'),
+          child: Text('Voltar para pagina anterior '),
         ),
 
       ),
