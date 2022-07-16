@@ -10,7 +10,9 @@ class OnePage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.of(context).pushNamed('/twopage');
+            Navigator.of(context).pushNamed('/twopage', arguments: 'teste').then(
+              (value) => print(value),
+              );
           },
           child: Text('Ir para segunda pagina'),
         ),
@@ -34,6 +36,27 @@ class OnePage extends StatelessWidget {
           },
           child: Text('Ir para segunda pagina'),
         ),
+
+
+        Retornando para a page anterior e devolvendo um valor
+-adicionando .then ao pusheNamed
+-retornando u valor com o pop, que é um objeto que pode receber um parametro
+
+   */
+
+  /*
+   Inclui appbar: AppBar para adicionar um botão de voltar
+   Para retirar esse botão:
+   
+   Navigator.of(context).pushReplacedNamed('/twopage', arguments: 'teste').then(value) =>
+            print(value);
+
+            Porém ele volta pra algo q nao esta na pilha, adicione um um metodo canPop que retorna um boleano, e volta se for true
+            onPressed: () {
+           if(Navigator.of(context).canPop()) {
+            Navigator.of(context).pop('Retorno');
+           }
+          },
    */
 
 
