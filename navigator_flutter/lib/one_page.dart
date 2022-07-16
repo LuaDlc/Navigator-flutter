@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:navigator_flutter/two_page.dart';
-
 class OnePage extends StatelessWidget {
   const OnePage({Key ? key}) : super(key: key);
 
@@ -10,8 +9,8 @@ class OnePage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.of(context).pushNamed('/twopage', arguments: 'teste').then(
-              (value) => print(value),
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const TwoPage()),
               );
           },
           child: Text('Ir para segunda pagina'),
